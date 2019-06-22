@@ -1,4 +1,4 @@
-
+package com.array;
 /*replace each number by its next bigger number in right side*/
 public class ReplaceNumber {
 	public static void main(String[] args) {
