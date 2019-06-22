@@ -1,5 +1,6 @@
 package com.matrix;
-/*print matrix in spiral form*/
+/*Print matrix in spiral form
+ * */
 public class MatrixScanSpiral {
 	public static void main(String[] args) {
 		int mat[][] = { {2, 4, 10}, {3, 6, 9}, {7, 8, 11} };						
@@ -23,7 +24,7 @@ public class MatrixScanSpiral {
 				}
 				if(direction==1){
 					int j=n_col-1;
-					while(j>0){
+					while(j>=0){
 						System.out.print(" "+array[i][j]);
 					j--;
 					}
