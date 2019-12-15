@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-//return a string which is formed by appending last character of each string in ArrayList()
+//return list of students with marks above average.
 public class StudentMarks {
 public static void main(String[] args) {
 	Map<String,Integer> students = new HashMap<String, Integer>();
@@ -15,27 +15,21 @@ public static void main(String[] args) {
 	students.put("Sunil", 30);
 	students.put("Swapnil", 70);
 	students.put("Shubham", 20);
-	
-	//String result = getStudents(input);
+		
 	System.out.println("Students with marks above average are: "+getStudents(students));
 }
 static List<String> getStudents(Map<String,Integer> students) {
 	Integer average=0;
 	Integer  sum=0;
 	Integer count=0;
-	Iterator studentIterator = students.values().iterator();
+	Iterator<Integer> studentIterator = students.values().iterator();
 	while (studentIterator.hasNext()) {
-		Integer object = (Integer) studentIterator.next();
+		Integer object =  studentIterator.next();
 		sum = sum + object;
 		count++;
-	}
-	
-	//List<Integer> marks = (List<Integer>)students.values();
+	}	
 	List<String> studentQualified = new ArrayList<String>();
 	
-//	for (Integer mark : marks) {
-//		sum = sum + mark;
-//	}
 	average = sum/(count);
 	Set<String> keys = students.keySet();
 	for (Iterator iterator = keys.iterator(); iterator.hasNext();) {		
