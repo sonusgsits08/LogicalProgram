@@ -19,6 +19,5 @@ System.out.println("a equals b? :"+(a==b));
 int ar [][] = new int[3][4];
 int size = ar.length;
 System.out.println("size"+size);
-
 }
 }
